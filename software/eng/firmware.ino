@@ -26,7 +26,7 @@
 #include <SoftwareSerial.h>
 
 //MOTOR section of ULN2003A chip
-const byte motorSteps          = 16; // 8 is older value
+const byte motorSteps          = 16; 
 const int  motorSpeed          = 1024;
 const int  motorTurn           = 2048;
 const byte motorNumTurnsMax    = 100;
@@ -74,15 +74,6 @@ String displayString = "";
 int    displayBackLightTime = 150; // 15 sec
 int    displayBackLightCount = 0;
 
-byte s1[8] = {6, 10, 10, 10, 31, 17, 17, 0};  // Д
-byte s2[8] = {14, 1, 1, 6, 1, 1, 14, 0};      // З
-byte s3[8] = {17, 17, 17, 19, 21, 25, 17, 0}; // И
-byte s4[8] = {21, 21, 17, 19, 21, 25, 17, 0}; // Й
-byte s5[8] = {15, 9, 9, 9, 9, 9, 17, 0};      // Л
-byte s6[8] = {17, 17, 17, 15, 1, 17, 15, 0};  // У
-byte s7[8] = {15, 17, 17, 15, 3, 5, 25, 0};   // Я
-byte s8[8] = {17, 17, 17, 25, 21, 21, 25, 0}; // Ы
-
 LiquidCrystal_I2C lcd(0x3F,16,2);
 
 int menuState = 1;
@@ -95,8 +86,7 @@ void setup() {
   timeInit();
   hcInit();
     
-  displayPrintLn("   \7 DOMOBO\4!    ", 0, 0);
-  displayPrintLn("     ", 11, 0);
+  displayPrintLn("  I AM DOMOBOY! ", 0, 0);
   
 }
 
