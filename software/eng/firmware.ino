@@ -86,7 +86,7 @@ void setup() {
   timeInit();
   hcInit();
     
-  displayPrintLn("  I AM DOMOBOY! ", 0, 0);
+  displayPrintLn("  I AM DOMOVOY! ", 0, 0);
   
 }
 
