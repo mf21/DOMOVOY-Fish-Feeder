@@ -18,19 +18,19 @@
       
   if (menuAlarmCheck(1)) {
     displayPrintLightOn("     FEED 1     ", 0, 0);
-    displayPrintLn("   HYAM-HYAM!   ", 0 ,1);
+    displayPrintLn("    YUM-YUM!   ", 0 ,1);
     motorRotate(motorNumTurns);
   } else if (menuAlarmCheck(2)) {
     displayPrintLightOn("     FEED 2     ", 0, 0);
-    displayPrintLn("   HYAM-HYAM!   ", 0 ,1);
+    displayPrintLn("    YUM-YUM!   ", 0 ,1);
     motorRotate(motorNumTurns);
   } else if (menuAlarmCheck(3)) {
     displayPrintLightOn("     FEED 3     ", 0, 0);
-    displayPrintLn("   HYAM-HYAM!   ", 0 ,1);
+    displayPrintLn("    YUM-YUM!   ", 0 ,1);
     motorRotate(motorNumTurns);
   } else if (menuAlarmCheck(4)) {
     displayPrintLightOn("     FEED 4     ", 0, 0);
-    displayPrintLn("   HYAM-HYAM!   ", 0 ,1);
+    displayPrintLn("    YUM-YUM!   ", 0 ,1);
     motorRotate(motorNumTurns);
   }
 
@@ -86,7 +86,7 @@ void menuTimeCurrent() {
    }
 
   RTC.readTime();
-  displayPrintLn("  I AM DOMOBOY! ", 0, 0);
+  displayPrintLn("  I AM DOMOVOY! ", 0, 0);
   displayPrintLn("    " + timeFormatHMS(RTC.h, RTC.m, RTC.s) + "    ", 0, 1);
 }
 
@@ -238,7 +238,7 @@ int tmpMotorNumTurns;
      delay(400);
    }
 
-  displayPrintLn("SET DOSE", 0, 0);
+  displayPrintLn("SET DOSAGE", 0, 0);
   displayPrintLn(": " + String(motorNumTurns) + "    ", 8, 0);
   displayPrintLn("                ", 0, 1);
 }
@@ -275,7 +275,7 @@ void menuRetractionSet() {
 void menuMotorTest() {
 
   if (keysBTN2State == HIGH) {
-    displayPrintLn("   HYAM-HYAM!   ", 0 ,1);
+    displayPrintLn("    YUM-YUM!   ", 0 ,1);
     motorNumTurns = EEPROM.read(ROMMotorOffset);
     motorRotate(motorNumTurns);
     keysBTN2State = LOW;
